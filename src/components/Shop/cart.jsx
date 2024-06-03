@@ -30,7 +30,16 @@ function Cart() {
         setcart(updatedProduct)
     }
 
+// Filter out items with price not equal to "Free"
+const cartWithPrice = cart.filter((item) => item.price !== "Free");
 
+// Calculate the total price of each item
+const totalPricePerItem = cartWithPrice.map((item) => item.price * item.qty);
+
+console.log("total",totalPricePerItem);
+
+// Calculate the total price by summing up the prices of all items
+const totalPrice = totalPricePerItem.reduce((total, price) => total + price, 0);
 
     // ========== remove cart button =======
     function removeCart(prod) {
@@ -97,6 +106,10 @@ function Cart() {
                                 </div>
                             )
                         }
+                        <div className="cart-price">
+                            <h3>Cart total :</h3>
+                            <p>{totalPrice.toFixed(2)}</p>
+                        </div>
                     </div>
 
 

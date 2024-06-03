@@ -70,8 +70,8 @@ function Nav() {
                 icon: 'warning',
                 confirmButtonText: 'OK'
             })
-            navigate('/login')
         }
+        navigate('/cart')
     }
 
     function handleTheme(e) {

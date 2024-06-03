@@ -1,0 +1,138 @@
+.a-l-m-box{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.admin-l-m-container {
+    /* margin-bottom: 20px; */
+    width: 300px;
+    height: 400px;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 8px var(--border1),
+        3px 3px 12px var(--border2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin:120px 0 180px 0;
+}
+
+.a-l-heads {
+    padding: 0;
+    margin: 0;
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    color: var(--secondary_color);
+
+}
+
+/* input fields starts here */
+
+.a-l-input-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.a-l-field input {
+    width: 210px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--body_bg);
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+    padding-left: 40px;
+    position: relative;
+    font-family: "Poppins";
+    color: var(--secondary_color);
+    font-size: 14px;
+}
+
+.a-l-field input::placeholder {
+    position: absolute;
+    left: 40px;
+    color: var(--secondary_color);
+    font-size: 14px;
+    transition: 0.5s ease;
+    font-family: "Poppins";
+}
+
+.a-l-field input:hover::placeholder {
+    transform: translateX(10px);
+
+}
+
+.a-l-field input:focus::placeholder {
+    transition: 0.5s;
+    transform: translateX(0px);
+    opacity: 0;
+}
+
+.a-l-field {
+    position: relative;
+
+}
+
+.a-l-icon {
+    position: absolute;
+    left: 15px;
+    top: 58%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgb(104, 104, 104);
+}
+
+.a-l-field input:focus+.icon {
+    color: rgb(67, 125, 232);
+}
+
+.a-l-log-btn button {
+    width: 210px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    font-size: 17px;
+    font-family: "Poppins";
+    color: var(--secondary_color);
+    transition: 0.5s ease;
+    cursor: pointer;
+
+}
+
+.a-l-log-btn button:hover {
+    color: var(--primary_color);
+}
+
+.a-l-log-btn button:active {
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+}
+.a-l-forgot-btn{
+    color: rgb(67, 125, 232);
+    cursor: pointer;
+    width:auto;
+    align-content: center;
+    margin-right: 105px;
+}
+.a-l-forgot-btn p{
+    margin: 0;
+}
+
+.a-l-forgot-btn p:hover{
+    color: var(--secondary_color);
+}

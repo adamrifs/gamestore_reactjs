@@ -7,7 +7,7 @@ function Settings() {
         <div className='settings-cont'>
             <div className="set-contents">
                 <div className="set-to-admin">
-                    <Link to={'/admin'}>
+                    <Link to={'/adminlogin'}>
                         Admin
                     </Link>
                 </div>

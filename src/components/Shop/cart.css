@@ -110,6 +110,21 @@ body {
 }
 .sub-w-prod-box{
     min-height: 100vh;
+  
+}
+.cart-price{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cart-price h3{
+    font-size: 22px;
+
+}
+.cart-price p{
+    font-size: 20px;
+    align-items: center;
 }
 .w-prod-box {
     display: flex;

@@ -60,11 +60,11 @@ function Adminaddgame() {
                     </div>
                     <div className="add-name">
                         Type:
-                        <input type='text'
-                            id='addtype'
-                            placeholder='eg: pc / mb '
-                            value={addprod.type}
-                            onChange={(e) => setaddprod({ ...addprod, type: e.target.value })} />
+                        <select value={addprod.type || 'pc'}
+                         onChange={(e) => setaddprod({...addprod, type: e.target.value})}>
+                            <option value='pc'>pc</option>
+                            <option value='mb'>mb</option>
+                        </select>
                     </div>
                     <div className="add-name">
                         Name:

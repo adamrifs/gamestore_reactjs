@@ -26,6 +26,7 @@ import Footer from './components/footer/footer';
 import Searched from './components/Shop/searched';
 import Adminaddgame from './components/admin/adminaddgame';
 import Settings from './components/navbar/settings';
+import Adminlogin from './components/admin/adminlogin';
 function App() {
 
   const [user, setuser] = useState([])
@@ -81,6 +82,7 @@ function App() {
             <Route path='/searched' element={<Searched />} />
             <Route path='adminadd' element={<Adminaddgame />} />
             <Route path='/settings' element={<Settings />} />
+            <Route path='/adminlogin' element={<Adminlogin />} />
           </Routes>
           <Footer />
         </mycontext.Provider>
