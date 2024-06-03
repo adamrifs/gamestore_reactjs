@@ -102,6 +102,7 @@ export const games = [
     },
     {
         id: 7,
+        
         type: 'pc',
         qty: 1,
         name: 'Tomb Raider',
