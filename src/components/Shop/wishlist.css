@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary_color);
+    height: 100%;
+}
+
+.w-main-Container {
+    height: 100%;
+    position: relative;
+}
+
+.sub-Container {
+    width: 80%;
+    min-height: 100vh;
+    /* position: absolute;
+    left: 55%; */
+    margin-top: 40px;
+    margin-left: 250px;
+    /* transform: translateX(-50%); */
+    background-color: var(--body_bg);
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: -3px -3px 7px var(--border1),
+     3px 3px 5px var(--border2); */
+}
+
+.hero .w-heads {
+    margin-left: 20px;
+}
+
+.hero .w-cart {
+    margin-right: 20px;
+}
+
+.w-prod-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 250px;
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    margin-bottom: 10px;
+}
+
+.w-image {
+    width: 210px;
+    height: 220px;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.w-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.w-name-cat {
+    width: 600px;
+    height: 200px;
+}
+
+.w-name {
+    width: auto;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.w-cat {
+    width: auto;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.w-right-section {
+    width: 300px;
+    height: 200px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: -3px -3px 12px var(--border1),
+        3px 3px 5px var(--border2);
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.w-remove {
+    align-self: end;
+    margin-bottom: 20px;
+}
+
+.w-remove>button {
+    width: 100px;
+    height: 35px;
+    border: none;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    cursor: pointer;
+    border-radius: 8px;
+    color: var(--primary_color);
+}
+.w-remove>button:hover{
+    box-shadow: inset -3px -3px 7px var(--border1),
+    inset 3px 3px 5px var(--border2);
+}
+.w-remove button:active{
+    color: #0095b2;
+}
+.w-pr-vi {
+    width: 140px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.w-pr-vi .w-price{
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.w-pr-vi .w-addCart {
+    margin-bottom: 20px;
+}
+
+.w-addCart>button {
+    width: 130px;
+    height: 35px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 8px;
+    color: var(--primary_color);
+}
+.w-addCart>button:hover{
+    box-shadow: inset -3px -3px 7px var(--border1),
+    inset 3px 3px 5px var(--border2);
+}
+.w-addCart button:active{
+    color: #0095b2;
+}

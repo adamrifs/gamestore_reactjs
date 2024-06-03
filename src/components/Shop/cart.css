@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary_color);
+    height: 100%;
+}
+
+.main-Container {
+    height: 100%;
+    position: relative;
+   
+}
+.m-s-box{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  
+}
+.s-left-section {
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+.sort-container {
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
+    align-content: center;
+    border-radius: 4px;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.sort-container:hover {
+    color: var(--secondary_color);
+}
+
+.sort-container:active {
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+}
+
+.sort-container .s-arrow-d {
+    width: 25px;
+    height: 25px;
+    align-content: end;
+    padding-top: 5px;
+}
+
+
+/* ====== right container====== */
+.sub-Container {
+    width: 80%;
+    height: 100%;
+    /* position: absolute;
+    left: 55%; */
+    margin-top: 40px;
+    margin-right: 50px;
+    /* transform: translateX(-50%); */
+    background-color: var(--body_bg);
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: -3px -3px 7px var(--border1),
+     3px 3px 5px var(--border2); */
+}
+
+.hero .w-heads {
+    margin-left: 20px;
+}
+
+.hero .w-wish {
+    margin-right: 20px;
+}
+
+.w-wish a {
+    font-family: "Poppins";
+    text-decoration: none;
+    color: var(--primary_color);
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.w-wish a:hover {
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+}
+.sub-w-prod-box{
+    min-height: 100vh;
+}
+.w-prod-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 250px;
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    margin-bottom: 10px;
+}
+
+.w-image {
+    width: 210px;
+    height: 220px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.w-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.w-name-cat {
+    width: 600px;
+    height: 200px;
+}
+
+.w-name {
+    width: auto;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.w-cat {
+    width: auto;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.w-right-section {
+    width: 300px;
+    height: 200px;
+    margin-left: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: -3px -3px 12px var(--border1),
+        3px 3px 5px var(--border2);
+    border-radius: 8px;
+    margin-right: 15px;
+
+}
+
+.qty {
+    position: absolute;
+    top: 90px;
+    left: 8px;
+    background-color: var(--body_bg);
+    box-shadow: inset -3px -3px 4px var(--border1),
+        inset 3px 3px 4px var(--border2);
+    display: flex;
+    border-radius: 8px;
+    justify-content: space-between;
+    height: 30px;
+    width: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.Q-para {
+    text-align: center;
+    min-width: 50px;
+    font-weight: 500;
+}
+
+.Q-btn {
+    text-align: center;
+    width: 30px;
+    height: auto;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 5px var(--border1),
+        3px 3px 5px var(--border2);
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--primary_color);
+
+}
+
+.Q-btn:hover {
+    color: var(--secondary_color);
+}
+
+.Q-btn:active {
+    box-shadow: inset -3px -3px 4px var(--border1),
+        inset 3px 3px 4px var(--border2);
+}
+
+
+.w-remove {
+    align-self: end;
+    margin-bottom: 20px;
+}
+
+.w-remove>button {
+    width: 100px;
+    height: 35px;
+    border: none;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.w-remove>button:hover {
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+}
+
+.w-remove button:active {
+    color: #0095b2;
+}
+
+.w-pr-vi {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.w-pr-vi .w-viewCart {
+    margin-bottom: 20px;
+}
+
+.w-viewCart>button {
+    width: 130px;
+    height: 35px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    cursor: pointer;
+    color: var(--primary_color);
+    border-radius: 8px;
+}
+
+.w-viewCart>button:hover {
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+}
+
+.w-viewCart button:active {
+    color: #0095b2;
+}

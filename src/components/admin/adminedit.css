@@ -1,0 +1,194 @@
+.edit-container{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.a-back-btn{
+    padding: 10px 40px;
+    position: absolute;
+    top:40px;
+    left: 60px;
+    background-color: var(--bg_color);
+    box-shadow: -3px -3px 8px var(--border1),
+    3px 3px 5px var(--border2);
+    border: none;
+    border-radius: 4px;
+    color: var(--primary_color);
+    font-size: 15px;
+    font-family: "Poppins";
+    letter-spacing: 1px;
+}
+.a-back-btn:hover{
+    box-shadow:inset -3px -3px 8px var(--border1),
+    inset 3px 3px 5px var(--border2);
+}
+.edit-box {
+    width: 80%;
+    height: 700px;
+    display: flex;
+    gap: 20px;
+}
+
+.edit-image {
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    margin-top: 50px;
+    overflow: hidden;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.edit-image-cont{
+    width: 500px;
+    height: 300px;
+}
+.edit-image-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.edit-image-input{
+    width: 600px;
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+}
+.edit-image-input #image-inp{
+    outline: none;
+    border: none;
+    background-color: var(--search_color);
+    font-family: "Poppins";
+    padding-left: 5px;
+    width: 385px;
+    resize: none;
+}
+.edit-logo-input{
+    width: 600px;
+    display: flex;
+    gap: 30px;
+    padding-left: 10px;
+}
+.edit-logo-input #logo-inp{
+    outline: none;
+    border: none;
+    background-color: var(--search_color);
+    font-family: "Poppins";
+    padding-left: 5px;
+    width: 385px;
+    resize: none;
+}
+
+.edit-right {
+    width: 50%;
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.edit-name {
+    width: 320px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-name input {
+    outline: none;
+    border: none;
+    background-color: var(--search_color);
+    width: 200px;
+    height: 25px;
+    font-family: "Poppins";
+    padding-left: 5px;
+}
+
+.edit-price {
+    width: 320px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-price input {
+    outline: none;
+    border: none;
+    background-color: var(--search_color);
+    width: 200px;
+    height: 25px;
+    font-family: "Poppins";
+    padding-left: 5px;
+
+}
+
+.edit-cat {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.edit-cat input {
+    outline: none;
+    border: none;
+    background-color: var(--search_color);
+    width: 200px;
+    height: 25px;
+    font-family: "Poppins";
+    padding-left: 5px;
+
+}
+
+.edit-desc {
+    width: 500px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.edit-desc textarea {
+    outline: none;
+    border: none;
+    background-color: var(--search_color);
+    resize: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-family: "Poppins";
+}
+.edit-desc textarea::-webkit-scrollbar{
+    width: 0px;
+}
+
+.submit-btn {
+    width: 100px;
+    margin-top: 60px;
+    margin-left: -100px;
+}
+
+.submit-btn .submit {
+    padding: 10px 100px;
+    border: none;
+    background-color: var(--bg_color);
+    box-shadow: -3px -3px 8px var(--border1),
+        3px 3px 5px var(--border2);
+    color: var(--primary_color);
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Poppins';
+}
+
+.submit-btn button:hover {
+    box-shadow: inset -3px -3px 8px var(--border1),
+        inset 3px 3px 6px var(--border2);
+}
+.submit-btn button:active{
+    color: var(--secondary_color);
+}

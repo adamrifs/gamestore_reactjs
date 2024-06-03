@@ -1,0 +1,106 @@
+.u-container, 
+.u-container *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.u-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+}
+
+.u-left-section {
+    background-color: var(--body_bg);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-det {
+    height: 180px;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 8px var(--border1),
+        3px 3px 8px var(--border2);
+    margin: 5px 10px 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.user-det .u-logo{
+    color: black;
+}
+.user-det .u-logo>svg{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.u-menu {
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 8px var(--border1),
+        3px 3px 5px var(--border2);
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.u-menu ul {
+    text-align: left;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.u-menu ul li {
+    list-style: none;
+    /* padding: 10px 10px 20px 10px; */
+    padding: 20px 20px 10px 20px ;
+    background-color: var(--body_bg);
+    margin:10px 0;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    gap:10px;
+}
+
+.u-menu ul li>span {
+    font-size: 25px;
+}
+.u-menu ul li:hover {
+    background-color: var(--body_bg);
+    box-shadow:inset -3px -3px 8px var(--border1),
+    inset 3px 3px 5px var(--border2);
+    border-radius: 12px;
+}
+.u-menu ul li:active{
+    color: var(--secondary_color);
+    transition: 0.1s;
+}
+/* ====== right section ====== */
+.u-right-section {
+    width: 100%;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 8px var(--border1),
+    3px 3px 5px var(--border2);
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow-y: scroll;
+}
+.u-right-section::-webkit-scrollbar {
+    width: 12px; 
+}
+.u-right-section::-webkit-scrollbar-track {
+    background: var(--body_bg);
+}
+.u-right-section::-webkit-scrollbar-thumb{
+    background-color: var(--secondary_color);
+}

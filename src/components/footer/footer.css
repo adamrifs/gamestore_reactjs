@@ -1,0 +1,148 @@
+footer{
+    width: 100%;
+    height:300px;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    align-content: center;
+    z-index: 22334;
+}
+.f-content{
+    width: 85%;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    gap:40px;
+    color: var(--footer_color);
+
+}
+
+/*========= f-box1 ======= */
+
+.f-box-1 .f-cname{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--footer_color);
+
+}
+.f-cname h2{
+    font-size: 32px;
+    margin: 0;
+    color: var(--footer_color);
+
+}
+/*========= f-box2 ======= */
+.f-box-2{
+    width: auto;
+    margin-right: 0;
+}
+.f-box-2 ul{
+    list-style: none;
+    text-align: left;
+}
+.f-box-2 .f-Prod{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--footer_color);
+
+}
+.f-box-2 ul li{
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--footer_color);
+
+}
+/*========= f-box3 ======= */
+.f-box-3{
+    height: 170px;
+    /* margin-right: 100px; */
+}
+.f-box-3 ul{
+    list-style: none;
+    text-align: left;
+    align-content: start;
+}
+.f-box-3 ul li{
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--footer_color);
+
+}
+.f-box-3 .f-Comp{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--footer_color);
+
+}
+
+
+
+/*========= f-box4 ======= */
+
+.f-box-4{
+    width: 580px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+.f-gt h2{
+    margin-bottom: 0;
+    text-align: right;
+    color: var(--footer_color);
+
+}
+.f-gt .f-gt-social-icons{
+    width: 100%;
+    margin:10px 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--footer_color);
+}
+.f-gt-social-icons .fgt-ic{
+    width: 20px;
+    height:20px;
+}
+.fgt-ic>svg{
+    width: 100%;
+    height:100%;
+}
+.fgt-ic>svg:hover{
+    color: #0095b2;
+}
+.f-box-4 .f-cdesc{
+    width:450px;
+    font-size: 10px;
+    margin-left: 150px;
+    font-weight: 200;
+    text-align: center;
+    color: var(--footer_color);
+
+}
+hr{
+    width: 80%;
+    margin-bottom: 20px;
+    height: 0px solid;
+}
+.f-design{
+    text-align: center;
+    font-size:12px;
+    font-weight:300;
+    color: var(--footer_color);
+}
+.f-design p{
+    margin-bottom: 30px;
+}
+.f-design p span{
+    font-size: 14px;
+    color: #0095b2;
+}
+.f-design>svg{
+    margin-top: 80px;
+}

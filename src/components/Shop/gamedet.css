@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.main-box {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: var(--primary_color);
+}
+
+.c-nav-back {
+    width: 0;
+    position: absolute;
+    top: 12%;
+    left: 35px;
+
+}
+
+.c-nav-back button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border2),
+        3px 3px 8px var(--border2);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    color: #0095b2;
+    transition: 0.5s ease;
+}
+
+.c-nav-back button:hover {
+    box-shadow: inset -3px -3px 7px var(--border1),
+    inset 3px 3px 9px var(--border2);
+}
+.c-nav-back button:active {
+    color: #48cae4;
+}
+
+/* left section starts here !!!! */
+
+
+.left-section {
+    width: 50%;
+    height: auto;
+}
+
+.left-section .game-image {
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: -3px -3px 8px var(--border1),
+        4px 4px 8px var(--border2);
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: imageScale 12s ease-in-out infinite ;
+}
+@keyframes imageScale {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.left-section .game-desc {
+    width: 800px;
+    height: auto;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.prod-specification {
+    text-align: left;
+    margin-top: 40px
+}
+
+/* right section starts here */
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section .game-heading {
+    text-align: center;
+    width: 400px;
+}
+
+.right-section .game-logo {
+    align-content: center;
+    width: 250px;
+    height: 250px;
+    margin-left: 75px;
+}
+
+.game-logo>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.right-section .price {
+    text-align: left;
+    margin-left: 20px;
+    font-family: "Inter", sans-serif;
+
+}
+
+.right-section .price h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+
+/* purchasing buttons starts here */
+.right-section .prod-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.prod-buttons button {
+    width: 300px;
+    height: 50px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 6px var(--border1),
+        3px 3px 8px var(--border2);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--primary_color);
+}
+
+.prod-buttons button:active {
+    box-shadow: inset -3px -3px 6px var(--border1),
+        inset 3px 3px 8px var(--border2);
+}
+
+.prod-buttons button:hover {
+    color: #0095b2;
+}
+
+/* buy now button */
+.prod-buttons button:nth-child(1) {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #48cae4;
+    box-shadow: -3px -3px 6px var(--border1),
+        4px 4px 8px var(--border2);
+    color: white;
+}
+
+.prod-buttons button:nth-child(1):hover {
+    color: black;
+}
+
+.prod-buttons button:nth-child(1):active {
+    background-color: #0e879f;
+
+}
+
+.prod-buttons button:nth-child(3) {
+    position: relative;
+    height: 40px;
+}
+
+.prod-buttons button svg {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    border-radius: 50%;
+    transition: 0.5s ease;
+    font-size: 22px;
+}
+

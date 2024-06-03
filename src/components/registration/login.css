@@ -1,0 +1,228 @@
+body{
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--primary_color);
+}
+.l-main-cont{
+    height: 100%;
+    position: relative;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-direction: column; */
+    width: 75%;
+    height: 75vh;
+    background-color: var(--body_bg);
+    border-radius: 12px;
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 8px var(--border2);
+    overflow: hidden;
+    margin: 80px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    bottom: -45px;
+    left: -45px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: var(--body_bg);
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 9px var(--border2);
+
+}
+
+/* link to sign page starts here */
+
+.signup-container {
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+.sign-head {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    font-size: 22px;
+    color: var(--secondary_color);
+}
+
+.inner-sign-cont {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 400px;
+    height: 300px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sign-icon {
+    font-size: 130px;
+    margin-left: 20px;
+    color: rgb(89, 89, 89);
+}
+
+.sign-link p {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--secondary_color);
+    margin-bottom: 70px;
+    margin-right: 40px;
+    transition: 0.5s ease;
+}
+
+.sign-link p:hover {
+    transform: scale(1.1);
+    color: black;
+}
+.sign-link :link{
+    text-decoration: none;
+}
+
+/* input container starts here */
+
+.main-container {
+    /* margin-bottom: 20px; */
+    width: 300px;
+    height: 400px;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 8px var(--border1),
+        3px 3px 12px var(--border2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.heads {
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+    font-size: 38px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    color: var(--secondary_color);
+
+}
+
+/* input fields starts here */
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.field input {
+    width: 210px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--body_bg);
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+    padding-left: 40px;
+    position: relative;
+    font-family: "Poppins";
+    color: var(--secondary_color);
+    font-size: 14px;
+}
+
+.field input::placeholder {
+    position: absolute;
+    left: 40px;
+    color: var(--secondary_color);
+    font-size: 14px;
+    transition: 0.5s ease;
+    font-family: "Poppins";
+}
+
+.field input:hover::placeholder {
+    transform: translateX(10px);
+
+}
+
+.field input:focus::placeholder {
+    transition: 0.5s;
+    transform: translateX(0px);
+    opacity: 0;
+}
+
+.field {
+    position: relative;
+
+}
+
+.icon {
+    position: absolute;
+    left: 15px;
+    top: 58%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgb(104, 104, 104);
+}
+
+.field input:focus+.icon {
+    color: rgb(67, 125, 232);
+}
+
+.log-btn button {
+    width: 210px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: var(--body_bg);
+    box-shadow: -3px -3px 7px var(--border1),
+        3px 3px 5px var(--border2);
+    font-size: 17px;
+    font-family: "Poppins";
+    color: var(--secondary_color);
+    transition: 0.5s ease;
+    cursor: pointer;
+
+}
+
+.log-btn button:hover {
+    color: var(--primary_color);
+}
+
+.log-btn button:active {
+    box-shadow: inset -3px -3px 7px var(--border1),
+        inset 3px 3px 5px var(--border2);
+}
+.forgot-btn{
+    color: rgb(67, 125, 232);
+    cursor: pointer;
+    width:auto;
+    align-content: center;
+    margin-right: 105px;
+}
+.forgot-btn p{
+    margin: 0;
+}
+
+.forgot-btn p:hover{
+    color: var(--secondary_color);
+}
