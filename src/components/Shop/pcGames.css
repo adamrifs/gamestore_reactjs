@@ -28,7 +28,7 @@ body {
     /* z-index: 10; */
 }
 
-.filter {
+.pc-filter {
     background-color: var(--body_bg);
     box-shadow: -3px -3px 8px var(--border1),
         3px 3px 5px var(--border2);
@@ -40,7 +40,7 @@ body {
     cursor: pointer;
 }
 
-.filter:hover {
+.pc-filter:hover {
     box-shadow: inset -3px -3px 8px var(--border1),
         inset 3px 3px 5px var(--border2);
     color: #48cae4;
@@ -205,8 +205,20 @@ body {
 }
 
 @media (max-width:700px) {
+    .pc-filter{
+        position: absolute;
+        top: -25px;
+        left: 10px;
+        width: 150px;
+    }
+    .pc-wishlist-nav{
+        position: absolute;
+        top:-25px;
+        left: 210px;
+        width: 150px;
+    }
     .card:nth-child(1) {
-        margin-top: 80px;
+        margin-top: 0;
     }
 
     .card:nth-child(2) {

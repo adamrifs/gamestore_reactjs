@@ -66,7 +66,7 @@ function MobileGames() {
   return (
     <div className="box">
       <div className="filter-box">
-        <div className="filter" onClick={filterBtn}>
+        <div className="pc-filter" onClick={filterBtn}>
           <div className="filter-icon">
             <IoFilter />
           </div>

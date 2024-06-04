@@ -114,7 +114,12 @@ function Nav() {
         };
     }, []);
 
-
+    // useEffect(() => {
+    //     const nav = document.querySelector('.nav-links')
+    //     const showMenu = () => {
+    //         nav.style.right = '0'
+    //     }
+    // }, [])
     return (
         <div className='nav-main-cont'>
             <div className={`nav-bar ${scrolled ? 'scrolled sticky' : ''}`}>
@@ -140,7 +145,7 @@ function Nav() {
                         <IoIosSearch />
                     </button>
                 </div>
-                <span className='hamburger-menu'><RiMenu3Fill /></span>
+                <span className='hamburger-menu' ><RiMenu3Fill /></span>
                 <div className="nav-logCart">
                     <div className="theme-toggle">
                         <input type='checkbox' className='nav-toggle-theme' id='toggle-theme' checked={istheme} onChange={handleTheme} />
