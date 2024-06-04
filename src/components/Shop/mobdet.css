@@ -216,7 +216,7 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        padding: 50px 10px;
+        padding: 50px 0px;
     }
     .c-nav-back {
         width: 0;
@@ -233,8 +233,9 @@
         color: var(--secondary_color);
     }
     .left-section .game-image{
-        width: 410px;
-        height: 220px;
+        width: 400px;
+        height: 215px;
+        margin-left: 6px;
     }
     .left-section .game-desc{
         width: 400px;
@@ -253,6 +254,7 @@
     .right-section .game-heading h1{
         margin-top: 5px;
         margin-bottom: 5px;
+        margin-left: 4px;
     }
     .right-section .game-logo {
         width: 150px;
