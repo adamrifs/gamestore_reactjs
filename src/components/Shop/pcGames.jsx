@@ -1,4 +1,4 @@
-import React, { useContext} from 'react'
+import React, { useContext, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 import './pcGames.css'
 import { mycontext } from '../context'
@@ -10,6 +10,11 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { MdShoppingCart } from "react-icons/md";
 
 function PcGames() {
+
+  useEffect(() =>{
+    window.scrollTo(0,0);
+  },[]);
+
   const navigate = useNavigate()
   const { game,wish,setwish,cart,setcart } = useContext(mycontext)
 

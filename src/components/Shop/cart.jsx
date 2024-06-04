@@ -1,9 +1,13 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState , useEffect} from 'react'
 import './cart.css'
 import { mycontext } from '../context'
 import { Link } from 'react-router-dom'
 import { IoIosArrowDown } from "react-icons/io";
 function Cart() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     const { cart, setcart } = useContext(mycontext)
 
     // ============= adding buttons function ============ 

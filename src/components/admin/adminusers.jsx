@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { mycontext } from '../context'
 import './adminusers.css'
 import Login from '../registration/login'
@@ -6,6 +6,10 @@ import Login from '../registration/login'
 function Adminusers() {
     const { user, setuser, logeduser, setlogeduser, blocked,setblocked } = useContext(mycontext)
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     function handleBlock(userid) {
         setblocked( prevState => ({
             ...prevState,

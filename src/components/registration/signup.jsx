@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './signup.css'
 import { useContext } from 'react'
@@ -14,6 +14,9 @@ import { CiLogin } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 const Signup = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const navigate = useNavigate()
     const loginpage = () => {
@@ -83,8 +86,8 @@ const Signup = () => {
             }
         }
     }
-    const handlekeydown = (e)=>{
-        if(e.key === 'Enter'){
+    const handlekeydown = (e) => {
+        if (e.key === 'Enter') {
             handleadd(e)
         }
     }
@@ -113,8 +116,8 @@ const Signup = () => {
                                 id='E_mail'
                                 placeholder='email'
                                 value={email}
-                                onChange={(e) => setemail(e.target.value)} 
-                                onKeyDown={handlekeydown}/>
+                                onChange={(e) => setemail(e.target.value)}
+                                onKeyDown={handlekeydown} />
                             <span className='sign-input-icons'><MdEmail /></span>
                             {errors.email && <p>{errors.email}</p>}
                         </div>
@@ -135,8 +138,8 @@ const Signup = () => {
                                 id='cp_word'
                                 placeholder='confirm password'
                                 value={cpassword}
-                                onChange={(e) => setcpassword(e.target.value)} 
-                                onKeyDown={handlekeydown}/>
+                                onChange={(e) => setcpassword(e.target.value)}
+                                onKeyDown={handlekeydown} />
                             <span className='sign-input-icons'><RiLockPasswordFill /></span>
                             {errors.cpassword && <p>{errors.cpassword}</p>}
                         </div>

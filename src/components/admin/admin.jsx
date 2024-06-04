@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState , useEffect} from 'react'
 import './admin.css'
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoArrowUndoOutline } from "react-icons/io5";
@@ -14,6 +14,10 @@ import { mycontext } from '../context';
 import { useNavigate } from 'react-router-dom';
 
 function Admin() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate()
   const gotoback = () =>{
     navigate('/')

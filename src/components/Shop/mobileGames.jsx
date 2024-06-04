@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext , useEffect} from 'react'
 import './mobileGame.css'
 import { mycontext } from '../context'
 import { FaRegHeart } from "react-icons/fa";
@@ -11,8 +11,13 @@ import { FaHeart } from "react-icons/fa";
 
 function MobileGames() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const navigate = useNavigate()
-  const { mobile,wish,setwish,cart,setcart} = useContext(mycontext)
+  const { mobile, wish, setwish, cart, setcart } = useContext(mycontext)
   console.log(mobile)
 
   function filterBtn() {
@@ -31,30 +36,30 @@ function MobileGames() {
   const cat = [...new Set(mobile.map(item => item.Category))]
 
   // onclick functin for view filtered games when strigerring list item is working here
-  function handleChange(e){
+  function handleChange(e) {
     let filt = e.target.getAttribute('data-value');
     navigate(`/mobCategory/${filt}`);
   }
 
-   // wishlist and cart button starts here
-   function wishlistBtn(prod){
-    if(wish.includes(prod)){
+  // wishlist and cart button starts here
+  function wishlistBtn(prod) {
+    if (wish.includes(prod)) {
       wish.filter(fl => fl.prod !== prod)
       setwish(wish.filter((dt) => dt !== prod))
 
-    }else{
-      setwish([...wish,prod])
+    } else {
+      setwish([...wish, prod])
     }
   }
 
-// cart button
+  // cart button
 
-  function cartBtn(e){
-    if(cart.includes(e)){
+  function cartBtn(e) {
+    if (cart.includes(e)) {
       cart.filter(dt => dt.e !== e)
       setcart(cart.filter((rc) => rc !== e))
-    }else{
-      setcart([...cart,e])
+    } else {
+      setcart([...cart, e])
     }
   }
 
@@ -78,10 +83,10 @@ function MobileGames() {
           </ul>
         </div>
         <div className="pc-wishlist-nav">
-              <Link to={'/wishlist'}>
-              <FaRegHeart />
-              </Link>
-            </div>
+          <Link to={'/wishlist'}>
+            <FaRegHeart />
+          </Link>
+        </div>
       </div>
       {
         mobile.map(dat =>
@@ -97,11 +102,11 @@ function MobileGames() {
             <div className="g-category">Category:{dat.Category}</div>
             {/* <div className="g-desc">{dat.description}</div> */}
             <div className="w-c-btn">
-            <button className='addingBtn' onClick={() => wishlistBtn(dat)}>
-                {wish.includes(dat)?<FaHeart />: <FaRegHeart />}
-                </button>
-              <button className='addingBtn' onClick={() => cartBtn(dat) }>
-                {cart.includes(dat)? <MdShoppingCart />:<MdOutlineShoppingCart />}
+              <button className='addingBtn' onClick={() => wishlistBtn(dat)}>
+                {wish.includes(dat) ? <FaHeart /> : <FaRegHeart />}
+              </button>
+              <button className='addingBtn' onClick={() => cartBtn(dat)}>
+                {cart.includes(dat) ? <MdShoppingCart /> : <MdOutlineShoppingCart />}
               </button>
             </div>
           </div>

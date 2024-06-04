@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './mobdet.css'
 import { mycontext } from '../context';
 import { IoArrowBackCircleOutline } from "react-icons/io5";
@@ -6,16 +6,20 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { useNavigate, useParams } from 'react-router-dom';
 
 function Mobdet() {
-    const navigate = useNavigate()
-    const back = ()=>{
-        navigate('/mobileGame')
-    }
-    const {id} = useParams()
-    const {mobile,wish,setwish,cart,setcart} = useContext(mycontext)
-    const mobgame = mobile.find((dt) => dt.id === parseInt(id));
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const navigate = useNavigate()
+  const back = () => {
+    navigate('/mobileGame')
+  }
+  const { id } = useParams()
+  const { mobile, wish, setwish, cart, setcart } = useContext(mycontext)
+  const mobgame = mobile.find((dt) => dt.id === parseInt(id));
 
 
-     // cart function starts here
+  // cart function starts here
 
   function cartBtn(cprod) {
     if (cart.includes(cprod)) {
@@ -50,7 +54,7 @@ function Mobdet() {
         </div>
         <div className="prod-specification">
           <h2>Specifications</h2>
-          <p>{mobgame.specs.map((spec) =>(
+          <p>{mobgame.specs.map((spec) => (
             <li>{spec}</li>
           ))}</p>
         </div>
@@ -62,24 +66,24 @@ function Mobdet() {
         <div className="game-heading">
           <h1>{mobgame.name}</h1>
         </div>
-       <div className="game-logo">
-        <img src={mobgame.logo} alt=''/>
-       </div>
-       <div className="price">
-       <h2>{mobgame.price}</h2>
-       </div>
+        <div className="game-logo">
+          <img src={mobgame.logo} alt='' />
+        </div>
+        <div className="price">
+          <h2>{mobgame.price}</h2>
+        </div>
         <div className="prod-buttons">
-            <button>BUY NOW</button>
-            <button onClick={() => cartBtn(mobgame)}>
+          <button>BUY NOW</button>
+          <button onClick={() => cartBtn(mobgame)}>
             {cart.includes(mobgame) ? 'REMOVE FROM CART' : 'ADD TO CART'}
           </button>
           <button onClick={() => wishlistBtn(mobgame)}>
-            {wish.includes(mobgame) ? 'REMOVE ' :'ADD TO WISHLIST'}
+            {wish.includes(mobgame) ? 'REMOVE ' : 'ADD TO WISHLIST'}
             <span className='wishanimate'><IoIosAddCircleOutline /></span>
-            </button>
+          </button>
         </div>
       </div>
-          
+
     </div>
   )
 }

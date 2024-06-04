@@ -8,6 +8,10 @@ import video2 from '../navbar/video2.mp4';
 import Footer from '../footer/footer';
 function Shop() {
 
+  useEffect(() => {
+    window.scrollTo(0,0);
+
+  },[]);
   const { game, setgame, mobile, setmobile } = useContext(mycontext)
   const lsectionelement = useRef(null)
 

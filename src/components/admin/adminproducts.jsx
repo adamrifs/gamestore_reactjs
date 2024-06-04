@@ -1,10 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { mycontext } from '../context'
 import { Link, useNavigate } from 'react-router-dom'
 import './adminproduct.css'
 
 function Adminproducts() {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     const navigate = useNavigate()
 
     const { game, setgame } = useContext(mycontext)

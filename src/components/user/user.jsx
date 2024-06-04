@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState , useEffect} from 'react'
 import './user.css'
 import { PiPaintBrushBroadFill } from "react-icons/pi";
 import { PiTruckLight } from "react-icons/pi";
@@ -16,6 +16,10 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 function User() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { logeduser, user, theme, settheme } = useContext(mycontext)
   const [activeComponent, setactiveComponent] = useState('Theme')
   const navigate = useNavigate()

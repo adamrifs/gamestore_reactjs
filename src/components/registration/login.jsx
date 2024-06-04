@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import './login.css'
 import { IoPersonSharp } from "react-icons/io5";
 import { FaLock } from "react-icons/fa6";
@@ -8,6 +8,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 const Login = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
 
     const navigate = useNavigate()
     const home = ()=>{

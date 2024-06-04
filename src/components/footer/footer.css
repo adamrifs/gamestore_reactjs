@@ -1,13 +1,14 @@
-footer{
+footer {
     width: 100%;
-    height:300px;
+    height: 300px;
     margin: 0;
     padding: 0;
     background-color: black;
     align-content: center;
     z-index: 22334;
 }
-.f-content{
+
+.f-content {
     width: 85%;
     position: relative;
     bottom: 0;
@@ -15,64 +16,72 @@ footer{
     transform: translate(-50%);
     display: flex;
     align-items: center;
-    gap:40px;
+    gap: 40px;
     color: var(--footer_color);
-
 }
 
 /*========= f-box1 ======= */
 
-.f-box-1 .f-cname{
+.f-box-1 .f-cname {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--footer_color);
 
 }
-.f-cname h2{
+
+.f-cname h2 {
     font-size: 32px;
     margin: 0;
     color: var(--footer_color);
 
 }
+
 /*========= f-box2 ======= */
-.f-box-2{
+.f-box-2 {
     width: auto;
     margin-right: 0;
 }
-.f-box-2 ul{
+
+.f-box-2 ul {
     list-style: none;
     text-align: left;
 }
-.f-box-2 .f-Prod{
+
+.f-box-2 .f-Prod {
     font-size: 18px;
     font-weight: 600;
     color: var(--footer_color);
 
 }
-.f-box-2 ul li{
+
+.f-box-2 ul li {
     margin-top: 5px;
     font-size: 13px;
     color: var(--footer_color);
 
 }
+
 /*========= f-box3 ======= */
-.f-box-3{
+.f-box-3 {
     height: 170px;
     /* margin-right: 100px; */
 }
-.f-box-3 ul{
+
+.f-box-3 ul {
     list-style: none;
     text-align: left;
     align-content: start;
 }
-.f-box-3 ul li{
+
+.f-box-3 ul li {
     margin-top: 5px;
     font-size: 13px;
     color: var(--footer_color);
 
 }
-.f-box-3 .f-Comp{
+
+.f-box-3 .f-Comp {
     font-size: 18px;
     font-weight: 600;
     color: var(--footer_color);
@@ -83,20 +92,22 @@ footer{
 
 /*========= f-box4 ======= */
 
-.f-box-4{
+.f-box-4 {
     width: 580px;
     margin-left: 50px;
     margin-bottom: 40px;
 }
-.f-gt h2{
+
+.f-gt h2 {
     margin-bottom: 0;
     text-align: right;
     color: var(--footer_color);
 
 }
-.f-gt .f-gt-social-icons{
+
+.f-gt .f-gt-social-icons {
     width: 100%;
-    margin:10px 0;
+    margin: 10px 0;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -105,19 +116,23 @@ footer{
     cursor: pointer;
     color: var(--footer_color);
 }
-.f-gt-social-icons .fgt-ic{
+
+.f-gt-social-icons .fgt-ic {
     width: 20px;
-    height:20px;
+    height: 20px;
 }
-.fgt-ic>svg{
+
+.fgt-ic>svg {
     width: 100%;
-    height:100%;
+    height: 100%;
 }
-.fgt-ic>svg:hover{
+
+.fgt-ic>svg:hover {
     color: #0095b2;
 }
-.f-box-4 .f-cdesc{
-    width:450px;
+
+.f-box-4 .f-cdesc {
+    width: 450px;
     font-size: 10px;
     margin-left: 150px;
     font-weight: 200;
@@ -125,24 +140,92 @@ footer{
     color: var(--footer_color);
 
 }
-hr{
+
+hr {
     width: 80%;
     margin-bottom: 20px;
     height: 0px solid;
 }
-.f-design{
+
+.f-design {
     text-align: center;
-    font-size:12px;
-    font-weight:300;
+    font-size: 12px;
+    font-weight: 300;
     color: var(--footer_color);
 }
-.f-design p{
+
+.f-design p {
     margin-bottom: 30px;
 }
-.f-design p span{
+
+.f-design p span {
     font-size: 14px;
     color: #0095b2;
 }
-.f-design>svg{
+
+.f-design>svg {
     margin-top: 80px;
+}
+
+@media (max-width:700px) {
+    footer {
+        height: auto;
+        overflow: hidden;
+    }
+
+    .f-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        position: relative;
+    }
+
+    .f-cname h2 {
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .f-box-1 p{
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .f-box-2{
+        align-self: flex-start;
+    }
+    .f-box-2 ul{
+        padding-left: 0;
+    }
+
+    .f-box-3{
+        align-self: flex-start;
+        height: 120px;
+    }
+    .f-box-3 ul{
+        padding-left: 0;
+        margin-top: 5px;
+    }
+    .f-gt h2{
+        position: absolute;
+        top:85px;
+        right: 10px;
+    }
+    .f-gt .f-gt-social-icons{
+        position: absolute;
+        top:130px;
+        right: 10px;
+    }
+    .f-box-4 .f-cdesc {
+        position: absolute;
+        top: 210px;
+        right: 10px;
+        width: 200px;
+        font-size: 8px;
+        margin-left: 90px;
+        text-align: right;
+    }
+    hr{
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
 }

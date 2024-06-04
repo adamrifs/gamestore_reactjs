@@ -4,6 +4,10 @@ import { mycontext } from '../context'
 import { Link } from 'react-router-dom'
 import './adminedit.css'
 function AdminEdit() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     const navigate = useNavigate()
     const { game, setgame, mobile ,setmobile} = useContext(mycontext)
     const { type, id } = useParams()

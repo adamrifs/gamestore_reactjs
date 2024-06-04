@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext ,useEffect } from 'react'
 import './searched.css'
 import { mycontext } from '../context';
 import { FaRegHeart } from "react-icons/fa";
@@ -10,6 +10,11 @@ function Searched() {
     const navigate = useNavigate()
     const { searched, setsearched, } = useContext(mycontext)
     console.log('searcheddata', searched);
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[]);
+    
 
     // filter menu design==============
     function filterBtn() {

@@ -1,9 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext , useEffect} from 'react'
 import { mycontext } from '../context'
 import './adminmob.css'
 import { useNavigate } from 'react-router-dom'
 
 function Adminmobgames() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate()
   const { mobile, setmobile } = useContext(mycontext)
   function handlemobedit(game) {

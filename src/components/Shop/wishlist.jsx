@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './wishlist.css'
 import { mycontext } from '../context'
 
@@ -6,6 +6,10 @@ function Wishlist() {
     const {wish,setwish,cart,setcart} = useContext(mycontext)
     console.log('wished',wish)
 
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[]);
+    
     function addcart(cprod){
         if(cart.includes(cprod)){
             cart.filter((ct) => ct !== cprod)

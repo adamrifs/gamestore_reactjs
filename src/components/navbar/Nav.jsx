@@ -9,6 +9,7 @@ import { CiUser } from "react-icons/ci";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsSunFill } from "react-icons/bs";
 import Swal from 'sweetalert2'
+import { RiMenu3Fill } from "react-icons/ri";
 
 function Nav() {
     const navigate = useNavigate()
@@ -139,7 +140,7 @@ function Nav() {
                         <IoIosSearch />
                     </button>
                 </div>
-
+                <span className='hamburger-menu'><RiMenu3Fill /></span>
                 <div className="nav-logCart">
                     <div className="theme-toggle">
                         <input type='checkbox' className='nav-toggle-theme' id='toggle-theme' checked={istheme} onChange={handleTheme} />

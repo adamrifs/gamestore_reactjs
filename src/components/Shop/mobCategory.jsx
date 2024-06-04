@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './mobCategory.css'
 import { FaRegHeart } from "react-icons/fa";
 import { Link, useNavigate, useParams } from 'react-router-dom';
@@ -11,8 +11,12 @@ import { FaHeart } from "react-icons/fa";
 
 
 function MobCategory() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate()
-  const { mobile ,wish,setwish,cart,setcart} = useContext(mycontext)
+  const { mobile, wish, setwish, cart, setcart } = useContext(mycontext)
   // back function for redirect to mobile home page
   const back = () => {
     navigate('/mobileGame')
@@ -21,7 +25,7 @@ function MobCategory() {
   const { Category } = useParams()
 
   // filter menu design 
-  function filterBtn() { 
+  function filterBtn() {
     const filterMenu = document.querySelector('.filter-menu');
 
     if (filterMenu.style.opacity === '1') {
@@ -41,25 +45,25 @@ function MobCategory() {
   // using data passed by useparams
   const mobCat = mobile.filter(item => item.Category === Category)
 
-   // wishlist product function starts here
+  // wishlist product function starts here
 
-   function wishlistBtn(wprod){
-    if(wish.includes(wprod)){
+  function wishlistBtn(wprod) {
+    if (wish.includes(wprod)) {
       wish.filter(dt => dt.wprod !== wprod)
       setwish(wish.filter((ft) => ft !== wprod))
-    }else{
-      setwish([...wish,wprod])
+    } else {
+      setwish([...wish, wprod])
     }
   }
 
   // cart product function starts here
 
-  function cartBtn(cprod){
-    if(cart.includes(cprod)){
+  function cartBtn(cprod) {
+    if (cart.includes(cprod)) {
       cart.filter(cf => cf.cprod !== cprod)
       setcart(cart.filter((item) => item !== cprod))
-    }else{
-      setcart([...cart,cprod])
+    } else {
+      setcart([...cart, cprod])
     }
   }
 
@@ -87,16 +91,16 @@ function MobCategory() {
         <button onClick={back}><IoArrowBackCircleOutline /></button>
       </div>
       <div className="wishlist-nav">
-              <Link to={'/wishlist'}>
-              <FaRegHeart />
-              </Link>
-            </div>
+        <Link to={'/wishlist'}>
+          <FaRegHeart />
+        </Link>
+      </div>
       {
         mobCat.map(dat =>
           <div className="card">
             <div className="image">
               <Link to={`/mobdet/${dat.id}`}>
-                <img src={dat.image}  alt=''/>
+                <img src={dat.image} alt='' />
               </Link>
             </div>
             <div className="g-name">{dat.name}</div>
@@ -105,11 +109,11 @@ function MobCategory() {
             {/* <div className="g-desc">{dat.description}</div> */}
             <div className="w-c-btn">
               <button className='w-addingBtn' onClick={() => wishlistBtn(dat)}>
-                {wish.includes(dat) ? <FaHeart />: <FaRegHeart />}
-                </button>
+                {wish.includes(dat) ? <FaHeart /> : <FaRegHeart />}
+              </button>
               <button className='w-addingBtn' onClick={() => cartBtn(dat)}>
                 {cart.includes(dat) ? <MdShoppingCart /> : <MdOutlineShoppingCart />}
-                </button>
+              </button>
             </div>
           </div>
         )

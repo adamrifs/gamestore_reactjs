@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { mycontext } from '../context'
 import { FaRegHeart } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
@@ -13,8 +13,12 @@ import './pcCat.css'
 
 export default function PCCategoryView() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate()
-  
+
   // back function for redirect to mobile home page
   const back = () => {
     navigate('/pcGames')
@@ -32,7 +36,7 @@ export default function PCCategoryView() {
   }
 
 
-  const { game, setgame ,wish,setwish,cart,setcart } = useContext(mycontext)
+  const { game, setgame, wish, setwish, cart, setcart } = useContext(mycontext)
   const { category } = useParams()
 
   // for list display map without duplication
@@ -46,23 +50,23 @@ export default function PCCategoryView() {
 
   // wishlist product function starts here
 
-  function wishlistBtn(wprod){
-    if(wish.includes(wprod)){
+  function wishlistBtn(wprod) {
+    if (wish.includes(wprod)) {
       wish.filter(dt => dt.wprod != wprod)
       setwish(wish.filter((ft) => ft != wprod))
-    }else{
-      setwish([...wish,wprod])
+    } else {
+      setwish([...wish, wprod])
     }
   }
 
   // cart product function starts here
 
-  function cartBtn(cprod){
-    if(cart.includes(cprod)){
+  function cartBtn(cprod) {
+    if (cart.includes(cprod)) {
       cart.filter(cf => cf.cprod != cprod)
       setcart(cart.filter((item) => item != cprod))
-    }else{
-      setcart([...cart,cprod])
+    } else {
+      setcart([...cart, cprod])
     }
   }
 
@@ -91,10 +95,10 @@ export default function PCCategoryView() {
         <button onClick={back}><IoArrowBackCircleOutline /></button>
       </div>
       <div className="wishlist-nav">
-              <Link to={'/wishlist'}>
-              <FaRegHeart />
-              </Link>
-            </div>
+        <Link to={'/wishlist'}>
+          <FaRegHeart />
+        </Link>
+      </div>
       {
         PCGames.map(dat =>
 
@@ -110,11 +114,11 @@ export default function PCCategoryView() {
             {/* <div className="g-desc">{dat.description}</div> */}
             <div className="w-c-btn">
               <button className='w-addingBtn' onClick={() => wishlistBtn(dat)}>
-                {wish.includes(dat) ? <FaHeart />: <FaRegHeart />}
-                </button>
+                {wish.includes(dat) ? <FaHeart /> : <FaRegHeart />}
+              </button>
               <button className='w-addingBtn' onClick={() => cartBtn(dat)}>
                 {cart.includes(dat) ? <MdShoppingCart /> : <MdOutlineShoppingCart />}
-                </button>
+              </button>
             </div>
           </div>
         )

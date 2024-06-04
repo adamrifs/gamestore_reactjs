@@ -1,4 +1,4 @@
-import React, { useContext} from 'react'
+import React, { useContext, useEffect} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { mycontext } from '../context'
 import './gamedet.css'
@@ -7,6 +7,9 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 
 
 function Gamedet() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const navigate = useNavigate()
   const back = () => {
