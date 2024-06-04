@@ -10,6 +10,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsSunFill } from "react-icons/bs";
 import Swal from 'sweetalert2'
 import { RiMenu3Fill } from "react-icons/ri";
+import { IoIosArrowForward } from "react-icons/io";
 
 function Nav() {
     const navigate = useNavigate()
@@ -18,7 +19,7 @@ function Nav() {
     const [searchinp, setsearchinp] = useState([])
     const { id } = useParams()
     const [scrolled, setScrolled] = useState(false);
-
+    const [isopen, setisopen] = useState(false)
 
     console.log(searchinp);
     function searchFunction() {
@@ -114,12 +115,12 @@ function Nav() {
         };
     }, []);
 
-    // useEffect(() => {
-    //     const nav = document.querySelector('.nav-links')
-    //     const showMenu = () => {
-    //         nav.style.right = '0'
-    //     }
-    // }, [])
+    //================hamburger menu ===============
+
+    const showMenu = ()=>{
+        setisopen(!isopen)
+    }
+
     return (
         <div className='nav-main-cont'>
             <div className={`nav-bar ${scrolled ? 'scrolled sticky' : ''}`}>
@@ -128,7 +129,7 @@ function Nav() {
                     <p>Fornax</p>
                 </div>
 
-                <ul className="nav-links">
+                <ul className={`nav-links ${isopen ? 'open' : ''}`}>
                     <li onClick={home}>Home</li>
                     <li onClick={Pcgame}>PC</li>
                     <li onClick={mbgame}>Mobile</li>
@@ -145,8 +146,10 @@ function Nav() {
                         <IoIosSearch />
                     </button>
                 </div>
-                <span className='hamburger-menu' ><RiMenu3Fill /></span>
-                <div className="nav-logCart">
+
+                <span className='hamburger-menu' onClick={showMenu} ><RiMenu3Fill /></span>
+
+                <div className={`nav-logCart ${isopen ? 'open':''}`} >
                     <div className="theme-toggle">
                         <input type='checkbox' className='nav-toggle-theme' id='toggle-theme' checked={istheme} onChange={handleTheme} />
                         <label for='toggle-theme' >
@@ -165,6 +168,8 @@ function Nav() {
                             <CiUser />
                         </Link>
                     </div>
+                    <span className='close-menu' onClick={showMenu} ><IoIosArrowForward /></span>
+
                 </div>
             </div>
         </div>

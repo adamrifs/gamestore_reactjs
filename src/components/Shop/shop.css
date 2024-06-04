@@ -261,17 +261,19 @@ body {
 }
 
 @media (max-width:700px) {
-    .slider-heads{
+    .slider-heads {
         width: 80%;
         height: 50px;
-        margin-top:15px;
+        margin-top: 15px;
     }
-    .slider-heads h1{
+
+    .slider-heads h1 {
         font-size: 29px;
         margin: 0;
         font-weight: 600;
 
     }
+
     .slide-wrapper {
         width: 80%;
         height: 200px;
@@ -337,21 +339,26 @@ body {
         transform: translateX(-100%);
     }
 }
+
 @media (max-width:700px) {
     .t-c-head h2 {
         font-size: 29px;
     }
-    .top-categories{
+
+    .top-categories {
         height: 120px;
     }
+
     .t-c-slider {
         margin: 16px 0;
     }
+
     .t-c-slider img {
         width: 85px;
         height: 85px;
     }
 }
+
 /*================ new release box================ */
 .new-release-box {
     width: 100%;
@@ -439,8 +446,9 @@ body {
     text-align: left;
     margin: 8px 14px;
 }
+
 @media (max-width:700px) {
-    .new-release-box{
+    .new-release-box {
         padding: 0;
         overflow: hidden;
         overflow-x: scroll;
@@ -448,29 +456,35 @@ body {
         position: relative;
         scroll-behavior: smooth;
     }
-    .new-release-box::-webkit-scrollbar{
+
+    .new-release-box::-webkit-scrollbar {
         display: none;
     }
-    .release-heads{
+
+    .release-heads {
         margin-left: 10px;
         text-align: left;
         position: absolute;
         top: 0;
     }
-    .release-cards{
+
+    .release-cards {
         width: 180px;
         margin-top: 40px;
     }
-    .release-cards .r-card-image{
+
+    .release-cards .r-card-image {
         width: 180px;
         height: 200px;
     }
+
     .r-card-price {
         text-align: left;
         margin-top: 20px;
     }
-    
+
 }
+
 /* ============mobile games container ============ */
 
 .mobile-games-contain {
@@ -539,22 +553,26 @@ body {
     transform: scale(1);
     opacity: 1;
 }
+
 @media (max-width:700px) {
-    .mb-head-cont{
+    .mb-head-cont {
         margin-left: 10px;
         gap: 0;
     }
-    .mb-head-cont h2{
+
+    .mb-head-cont h2 {
         font-size: 22px;
     }
-    .mb-card-boxes-cont{
-        padding:0;
+
+    .mb-card-boxes-cont {
+        padding: 0;
         padding-bottom: 20px;
-        
+
     }
+
     .mb-g-c-card {
         width: 150px;
-        height:80px;
+        height: 80px;
         margin: 10px;
     }
 }
