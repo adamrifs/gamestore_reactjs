@@ -224,3 +224,39 @@ body{
     transform: scale(1.1);
     color: rgb(46, 109, 138);
 }
+@media (max-width:700px) {
+
+    .sg-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100vw;
+    }
+    .sub-container{
+        width: 350px;
+        height: 600px;
+        border-radius: 30px;
+    }
+    .sg-heads{
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    .log-container{
+        width: 98vw;
+        height: 220px;
+    }
+    .lg-heads{
+        width: 100%;
+        font-size: 18px;
+    }
+    .lg-in-icon{
+        font-size: 100px;
+    }
+    .link-to-login{
+        font-size: 24px;
+    }
+    .link-to-login p{
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
