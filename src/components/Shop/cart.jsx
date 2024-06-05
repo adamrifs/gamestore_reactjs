@@ -8,7 +8,7 @@ function Cart() {
         window.scrollTo(0, 0);
       }, []);
     
-    const { cart, setcart } = useContext(mycontext)
+    const { cart, setcart} = useContext(mycontext)
 
     // ============= adding buttons function ============ 
 
@@ -58,7 +58,7 @@ const totalPrice = totalPricePerItem.reduce((total, price) => total + price, 0);
                         <span className='s-arrow-d'><IoIosArrowDown /></span>
                     </div>
                 </div>
-                <div className="sub-Container">
+                <div className="second-Container">
                     <div className="hero">
                         <div className="w-heads">
                             <h2>Cart</h2>
@@ -75,32 +75,32 @@ const totalPrice = totalPricePerItem.reduce((total, price) => total + price, 0);
                     <div className="sub-w-prod-box">
                         {
                             cart.map(item =>
-                                <div className="w-prod-box">
-                                    <div className="w-image">
+                                <div className="c-prod-box">
+                                    <div className="c-image">
                                         <img src={item.image} alt='' />
                                     </div>
-                                    <div className="w-name-cat">
-                                        <div className="w-name">
+                                    <div className="c-name-cat">
+                                        <div className="c-name">
                                             <h1>{item.name}</h1>
                                         </div>
-                                        <div className="w-cat">
+                                        <div className="c-cat">
                                             <h3>{item.Category}</h3>
                                         </div>
                                     </div>
-                                    <div className="w-right-section">
+                                    <div className="c-right-section">
                                         <div className="qty">
                                             <button className='Q-btn' onClick={() => qsub(item)}>-</button>
                                             <span className='Q-para'>{item.qty}</span>
                                             <button className='Q-btn' onClick={() => qadd(item)}>+</button>
                                         </div>
-                                        <div className="w-remove">
+                                        <div className="c-remove">
                                             <button onClick={() => removeCart(item)}>Remove</button>
                                         </div>
-                                        <div className="w-pr-vi">
-                                            <div className="w-price">
+                                        <div className="c-pr-vi">
+                                            <div className="c-price">
                                                 <p>{item.price * item.qty}</p>
                                             </div>
-                                            <div className="w-viewCart">
+                                            <div className="c-viewCart">
                                                 <button >
                                                     BUY NOW
                                                 </button>

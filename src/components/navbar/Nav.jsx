@@ -10,7 +10,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsSunFill } from "react-icons/bs";
 import Swal from 'sweetalert2'
 import { RiMenu3Fill } from "react-icons/ri";
-import { IoIosArrowForward } from "react-icons/io";
+import { VscChromeClose } from "react-icons/vsc";
 
 function Nav() {
     const navigate = useNavigate()
@@ -168,7 +168,7 @@ function Nav() {
                             <CiUser />
                         </Link>
                     </div>
-                    <span className='close-menu' onClick={showMenu} ><IoIosArrowForward /></span>
+                    <span className='close-menu' onClick={showMenu} ><VscChromeClose /></span>
 
                 </div>
             </div>
