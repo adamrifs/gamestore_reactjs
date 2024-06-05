@@ -396,6 +396,8 @@ body {
         width: 150px;
         height: 40px;
         border-radius: 6px;
+        -webkit-tap-highlight-color: transparent;
+
 
     }
 
@@ -433,6 +435,8 @@ body {
         visibility: hidden;
         opacity: 0;
         transition: visibility 0.2s , opacity 0.6s;
+        -webkit-tap-highlight-color: transparent;
+
     }
     .nav-logCart.open{
         visibility: visible;
@@ -477,7 +481,7 @@ body {
     .hamburger-menu {
         display: block;
         font-size: 40px;
-        margin-top: 15px;
+        margin-top: 0px;
         width: 50px ;
         height: 50px;
         color: white;

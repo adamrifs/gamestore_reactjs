@@ -32,6 +32,8 @@
     height: 42px;
     color: #0095b2;
     transition: 0.5s ease;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .c-nav-back button:hover {
@@ -153,6 +155,8 @@
     font-size: 12px;
     cursor: pointer;
     color: var(--primary_color);
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .prod-buttons button:active {
@@ -173,6 +177,8 @@
     box-shadow: -3px -3px 6px var(--border1),
         4px 4px 8px var(--border2);
     color: white;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .prod-buttons button:nth-child(1):hover {
@@ -187,6 +193,8 @@
 .prod-buttons button:nth-child(3) {
     position: relative;
     height: 40px;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .prod-buttons button svg {

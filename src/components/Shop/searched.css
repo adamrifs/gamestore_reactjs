@@ -41,6 +41,8 @@ body {
     height: 42px;
     color: #0095b2;
     transition: 0.5s ease;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .sr-c-nav-back button:hover {
@@ -71,6 +73,8 @@ body {
     height: 35px;
     padding: 10px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .sr-filter:hover {
@@ -144,6 +148,8 @@ body {
     cursor: pointer;
     padding: 8px;
     font-size: 30px;
+    -webkit-tap-highlight-color: transparent;
+
 }
 .sr-pc-wishlist-nav:hover{
     box-shadow: inset -3px -3px 8px var(--border1),
@@ -233,6 +239,8 @@ body {
     transition: 0.2s ease;
     cursor: pointer;
     color: var(--primary_color);
+    -webkit-tap-highlight-color: transparent;
+
 }
 .sr-w-c-btn .w-addingBtn:active{
     transform: scale(1.3);

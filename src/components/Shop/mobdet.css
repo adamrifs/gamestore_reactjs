@@ -35,11 +35,13 @@
 
 .c-nav-back button:hover {
     box-shadow: inset -3px -3px 7px var(--border1),
-    inset 3px 3px 9px var(--border2);
+        inset 3px 3px 9px var(--border2);
 }
+
 .c-nav-back button:active {
     color: #48cae4;
 }
+
 /* left section starts here !!!! */
 
 
@@ -61,19 +63,23 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: imageScale 12s ease-in-out infinite ;
+    animation: imageScale 12s ease-in-out infinite;
 }
+
 @keyframes imageScale {
-    0%{
+    0% {
         transform: scale(1);
     }
-    50%{
+
+    50% {
         transform: scale(1.2);
     }
-    100%{
+
+    100% {
         transform: scale(1);
     }
 }
+
 .left-section .game-desc {
     width: 800px;
     height: auto;
@@ -150,7 +156,8 @@
     font-weight: 500;
     font-size: 12px;
     cursor: pointer;
-    
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .prod-buttons button:active {
@@ -174,12 +181,15 @@
     z-index: 4;
     position: relative;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+
 }
-.prod-buttons button:nth-child(1)::before{
+
+.prod-buttons button:nth-child(1)::before {
     content: '';
     position: absolute;
     background-color: #48cae4;
-    top:0;
+    top: 0;
     left: 0;
     width: 0;
     height: 50px;
@@ -187,20 +197,22 @@
     transition: 0.5s ease;
 
 }
+
 .prod-buttons button:nth-child(1):hover::before {
     width: 300px;
 }
 
 .prod-buttons button:nth-child(1):active::before {
     background-color: var(--body_bg);
-    box-shadow:inset -3px -3px 6px var(--border1),
-      inset  4px 4px 8px var(--border2);
+    box-shadow: inset -3px -3px 6px var(--border1),
+        inset 4px 4px 8px var(--border2);
     transition: 0.1s;
 }
 
 .prod-buttons button:nth-child(3) {
     position: relative;
     height: 40px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .prod-buttons button svg {
@@ -211,51 +223,63 @@
     transition: 0.5s ease;
     font-size: 22px;
 }
+
 @media (max-width:700px) {
-    .main-box{
+    .main-box {
         overflow: hidden;
+        width: 100vw;
         display: flex;
         flex-direction: column;
-        padding: 50px 0px;
+        padding: 60px 0px;
     }
+
     .c-nav-back {
         width: 0;
         position: absolute;
-        top: 60px;
+        top: 70px;
         left: 15px;
     }
+
     .c-nav-back button {
-       font-size: 38px;
+        font-size: 38px;
         border-radius: 6px;
         cursor: pointer;
         width: 120px;
         height: 40px;
         color: var(--secondary_color);
     }
-    .left-section .game-image{
-        width: 400px;
+
+    .left-section .game-image {
+        width: 97vw;
         height: 215px;
         margin-left: 6px;
     }
-    .left-section .game-desc{
-        width: 400px;
+
+    .left-section .game-desc {
+        width: 97vw;
         margin-left: 10px;
         font-size: 13px;
     }
-    .prod-specification{
+
+    .prod-specification {
         margin-top: 20px;
         font-size: 13px;
         margin-left: 10px;
-        width: 400px;
+        width: 97vw;
     }
-    .right-section .game-heading{
+
+    .right-section .game-heading {
         font-size: 15px;
+        width: 97vw;
+
     }
-    .right-section .game-heading h1{
+
+    .right-section .game-heading h1 {
         margin-top: 5px;
         margin-bottom: 5px;
         margin-left: 4px;
     }
+
     .right-section .game-logo {
         width: 150px;
         height: 150px;
@@ -264,8 +288,16 @@
         transform: translateX(-50%);
         margin-bottom: 15px;
     }
+
     .right-section .price {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+    .prod-buttons button:nth-child(1):active::before {
+        width: 300px;
+        transition: 0.8s;
+        
+    }
+    
 }

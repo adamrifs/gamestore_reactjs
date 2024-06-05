@@ -38,6 +38,8 @@ body {
     height: 35px;
     padding: 10px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 .pc-filter:hover {
@@ -111,6 +113,8 @@ body {
     cursor: pointer;
     padding: 8px;
     font-size: 30px;
+    -webkit-tap-highlight-color: transparent;
+
 }
 .pc-wishlist-nav:hover{
     box-shadow: inset -3px -3px 8px var(--border1),
@@ -199,6 +203,8 @@ body {
     transition: 0.2s ease;
     cursor: pointer;
     color: var(--primary_color);
+    -webkit-tap-highlight-color: transparent;
+
 }
 .w-c-btn .w-addingBtn:active{
     transform: scale(1.3);
