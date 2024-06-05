@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import './nav.css'
 import { PiShoppingCartThin } from "react-icons/pi";
 import { Link, useNavigate, useParams } from 'react-router-dom';
@@ -20,6 +20,7 @@ function Nav() {
     const { id } = useParams()
     const [scrolled, setScrolled] = useState(false);
     const [isopen, setisopen] = useState(false)
+    const menuref = useRef(null)
 
     console.log(searchinp);
     function searchFunction() {
@@ -121,6 +122,24 @@ function Nav() {
         setisopen(!isopen)
     }
 
+    const handleClickOutside = (event)=>{
+        if(menuref.current && !menuref.current.contains(event.target) &&
+            !event.target.closest('.nav-links')){
+            setisopen(false)
+        }
+    }
+    useEffect(() =>{
+        if(isopen){
+            document.addEventListener('touchstart',handleClickOutside)
+        }else{
+            document.removeEventListener('touchstart',handleClickOutside)
+        }
+
+        return ()=>{
+            document.removeEventListener('touchstart',handleClickOutside)
+        };
+    },[isopen]);
+
     return (
         <div className='nav-main-cont'>
             <div className={`nav-bar ${scrolled ? 'scrolled sticky' : ''}`}>
@@ -129,7 +148,7 @@ function Nav() {
                     <p>Fornax</p>
                 </div>
 
-                <ul className={`nav-links ${isopen ? 'open' : ''}`}>
+                <ul ref={menuref} className={`nav-links ${isopen ? 'open' : ''}`}>
                     <li onClick={home}>Home</li>
                     <li onClick={Pcgame}>PC</li>
                     <li onClick={mbgame}>Mobile</li>
@@ -149,7 +168,7 @@ function Nav() {
 
                 <span className='hamburger-menu' onClick={showMenu} ><RiMenu3Fill /></span>
 
-                <div className={`nav-logCart ${isopen ? 'open':''}`} >
+                <div ref={menuref} className={`nav-logCart ${isopen ? 'open':''}`} >
                     <div className="theme-toggle">
                         <input type='checkbox' className='nav-toggle-theme' id='toggle-theme' checked={istheme} onChange={handleTheme} />
                         <label for='toggle-theme' >
