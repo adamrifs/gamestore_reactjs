@@ -1,13 +1,15 @@
-body{
+body {
     font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--primary_color);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary_color);
 }
-.l-main-cont{
+
+.l-main-cont {
     height: 100%;
     position: relative;
 }
+
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -89,7 +91,8 @@ body{
     transform: scale(1.1);
     color: black;
 }
-.sign-link :link{
+
+.sign-link :link {
     text-decoration: none;
 }
 
@@ -212,17 +215,64 @@ body{
     box-shadow: inset -3px -3px 7px var(--border1),
         inset 3px 3px 5px var(--border2);
 }
-.forgot-btn{
+
+.forgot-btn {
     color: rgb(67, 125, 232);
     cursor: pointer;
-    width:auto;
+    width: auto;
     align-content: center;
     margin-right: 105px;
 }
-.forgot-btn p{
+
+.forgot-btn p {
     margin: 0;
 }
 
-.forgot-btn p:hover{
+.forgot-btn p:hover {
     color: var(--secondary_color);
+}
+
+@media (max-width:700px) {
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100vw;
+        height: 96vh;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 150px
+    }
+
+    .signup-container {
+        height: 300px;
+    }
+
+    .sign-head {
+        position: absolute;
+        top: 10px;
+    }
+    .sign-head h2{
+        margin-bottom: 0;
+        font-size: 22px;
+    }
+
+    .inner-sign-cont {
+        position: absolute;
+        top: 30px;
+    }
+
+    .main-container {
+        margin-bottom: 200px;
+        height: 900px;
+    }
+    .heads{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .forgot-btn p{
+        font-size: 13px;
+    }
 }
