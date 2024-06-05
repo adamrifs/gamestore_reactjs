@@ -23,10 +23,12 @@ function PcGames() {
     const filterMenu = document.querySelector('.filter-menu');
 
 
-    if (filterMenu.style.opacity === '1') {
-      filterMenu.style.opacity = '0'
+    if (filterMenu.style.visibility === 'visible') {
+      filterMenu.style.visibility = 'hidden'
+      filterMenu.style.opacity ='0'
     } else {
-      filterMenu.style.opacity = '1'
+      filterMenu.style.visibility = 'visible'
+      filterMenu.style.opacity ='1'
     }
   }
 

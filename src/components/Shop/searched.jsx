@@ -19,13 +19,13 @@ function Searched() {
     // filter menu design==============
     function filterBtn() {
         const filterMenu = document.querySelector('.sr-filter-menu');
-
-
-        if (filterMenu.style.opacity === '1') {
-            filterMenu.style.opacity = '0'
-        } else {
-            filterMenu.style.opacity = '1'
-        }
+        if (filterMenu.style.visibility === 'visible') {
+            filterMenu.style.visibility = 'hidden'
+            filterMenu.style.opacity ='0'
+          } else {
+            filterMenu.style.visibility = 'visible'
+            filterMenu.style.opacity ='1'
+          }
     }
 
     const back = ()=>{
