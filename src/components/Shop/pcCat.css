@@ -249,7 +249,7 @@ body {
 @media (max-width:700px) {
     .filter{
         position: absolute;
-        top: -25px;
+        top: 0px;
         left: 0px;
         width: 100px;
     }
@@ -262,7 +262,7 @@ body {
     .nav-back{
         position: absolute;
         top:75px;
-        left: 350px;
+        left: 325px;
     }
     .card:nth-child(1) {
         margin-top: 0px;
