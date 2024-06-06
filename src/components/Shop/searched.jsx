@@ -50,7 +50,7 @@ function Searched() {
                             //     <li key={item} onClick={handleClick} data-value={item}>
                             //         {item}
                             //     </li>
-                            // )
+                            // )  
                         }
                     </ul>
                 </div>

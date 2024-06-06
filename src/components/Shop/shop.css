@@ -286,11 +286,7 @@ body {
 
 .top-categories {
     width: 95vw;
-    height: 150px;
-    /* position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translate(-50%, 0); */
+    height: fit-content;
     box-sizing: border-box;
     border-radius: 12px;
     background-color: var(--body_bg);
@@ -300,6 +296,33 @@ body {
     overflow: hidden;
     position: relative;
 }
+/* ========== for fading ========== */
+/* .top-categories::before{
+    content: '';
+    width: 2px;
+    height: 100%;
+    opacity: 1;
+    background-color:var(--body_bg);
+    box-shadow: 5px 0 40px 40px var(--body_bg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.top-categories::after{
+    content: '';
+    width: 2px;
+    height: 100%;
+    opacity: 1;
+    background-color:var(--body_bg);
+    box-shadow: 5px 0 40px 40px var(--body_bg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+} */
+/* ================================ */
+
 
 .t-c-head h2 {
     font-size: 40px;
@@ -315,8 +338,11 @@ body {
 
 .t-c-slider {
     margin: 20px 0;
-    display: inline-block;
-    animation: 6s t-c-sliding infinite linear;
+    width: fit-content; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: t-c-sliding 30s linear infinite;
 }
 
 
@@ -338,7 +364,7 @@ body {
     }
 
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 

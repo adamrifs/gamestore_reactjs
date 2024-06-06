@@ -9,29 +9,29 @@ import Footer from '../footer/footer';
 function Shop() {
 
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
-  },[]);
+  }, []);
   const { game, setgame, mobile, setmobile } = useContext(mycontext)
   const lsectionelement = useRef(null)
 
   // ============= image carousel =================
-  const imgSlide = game.filter(item => [ 2, 3,25,7].includes(item.id))
+  const imgSlide = game.filter(item => [2, 3, 25, 7].includes(item.id))
   console.log('imgslide', imgSlide)
-  
+
   // ============ top categories===========
-  
-  const tcGame = [24, 27, 4, 5, 22, 25, 23]
+
+  const tcGame = [24,2, 27, 4, 5,7, 22, 25, 23,6,3]
   const tcGamesort = tcGame.map(index => game[index])
-  
+
   // =========== new releases==========
   // const imagesort = game.slice(10, 16)
-  const nrelesesort =[10,14,27,13,3,22] 
+  const nrelesesort = [10, 14, 27, 13, 3, 22]
   const nrelease = nrelesesort.map(index => game[index])
 
 
   // ============= mobile games sort =========
-  const mobileindices = [0, 21, 2, 3, 6, 7,1 , 5, 9]
+  const mobileindices = [0, 21, 2, 3, 6, 7, 1, 5, 9]
   const mobgames = mobileindices.map(index => mobile[index])
 
   // ============ scroll animation ============
@@ -150,25 +150,25 @@ function Shop() {
         </div>
         <div className="top-categories">
 
-          {
-            tcGamesort.map(img =>
-              <>
-                <div className="t-c-slider">
-                  <Link to={`/gamedet/${img.id}`}>
-                    <img src={img.image} />
-                  </Link>
-                </div>
-              </>
-            )}
-          {
-            game.map(gimg =>
-              <div className="t-c-slider">
-                <Link to={`/gamedet/${gimg.id}`}>
-                  <img src={gimg.image} />
+          <div className="t-c-slider">
+            {
+              tcGamesort.map(img =>
+                <Link to={`/gamedet/${img.id}`}>
+                  <img src={img.image} />
                 </Link>
-              </div>
-            )
-          }
+              )
+            }
+          {/* </div> */}
+
+          {/* <div className="t-c-slider"> */}
+            {
+              tcGamesort.map(img =>
+                <Link to={`/gamedet/${img.id}`}>
+                  <img src={img.image} />
+                </Link>
+              )
+            }
+          </div>
 
         </div>
 

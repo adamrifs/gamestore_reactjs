@@ -46,7 +46,7 @@ const Signup = () => {
         }
         if (!email.trim()) {
             validationerror.email = 'email is required'
-        } else if (!/\s+\@\s+\.\s+/) {
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
             validationerror.email = 'email is not valid'
         }
         if (!password.trim()) {
