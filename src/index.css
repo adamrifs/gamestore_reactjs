@@ -7,6 +7,7 @@
   --search_color:white;
   --sun_color:black;
   --footer_color:#ecf0f3;
+  --filtermenu_color:#ecf0f3ef;
 }
 [data-theme = "dark"]{
   --body_bg:#222;
@@ -17,6 +18,7 @@
   --search_color:#b7b7b7;
   --sun_color:orange;
   --footer_color:#ecf0f3;
+  --filtermenu_color:#222222cc;
 }
 body {
   margin: 0;
