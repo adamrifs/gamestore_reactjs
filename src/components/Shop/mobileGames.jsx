@@ -23,12 +23,12 @@ function MobileGames() {
   function filterBtn() {
     const filterMenu = document.querySelector('.filter-menu');
 
-    if (filterMenu.style.visibility === 'visible') {
-      filterMenu.style.visibility = 'hidden'
-      filterMenu.style.opacity ='0'
-    } else {
-      filterMenu.style.visibility = 'visible'
+    if (filterMenu.style.display === 'none' || filterMenu.style.display === '') {
+      filterMenu.style.display = 'block'
       filterMenu.style.opacity ='1'
+    } else {
+      filterMenu.style.display = 'none'
+      filterMenu.style.opacity ='0'
     }
   }
 
